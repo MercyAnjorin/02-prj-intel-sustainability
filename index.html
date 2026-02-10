@@ -4,13 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
+  <!-- Google Fonts: Roboto for title (Intel branding), Nunito for body text -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Nunito:wght@300;400;600;700&display=swap" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- Theme toggle button in the upper corner -->
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to night mode">
+    <!-- Moon icon for night mode -->
+    <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3 9 9 0 1 0 21 14.5z" />
+    </svg>
+    <!-- Sun icon for day mode -->
+    <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" />
+    </svg>
+  </button>
+
   <!-- Header / Hero Section -->
   <header>
-    <div>
+    <div class="header-content">
       <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
       <img src="img/intel-header-logo.svg" alt="Intel Logo" />
       <!-- Main Heading -->
@@ -28,14 +43,29 @@
   </header>
 
   <!-- Timeline Cards Section -->
-  <section>
+  <section class="timeline">
+    <!-- Arrow controls for the timeline -->
+    <div class="cards-controls">
+      <button class="arrow-button" id="prevCard" type="button" aria-label="Previous card">
+        <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15 5l-7 7 7 7" />
+        </svg>
+      </button>
+      <button class="arrow-button" id="nextCard" type="button" aria-label="Next card">
+        <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="cards-container">
 
     <!-- Card 1: 1968 -->
-    <div>
+    <div class="card">
       <h2>1968</h2>
       <h3>Intel Founded</h3>
-      <!-- Add image -->
-      <p>
+      <img src="img/1.jpg" alt="Intel Founded 1968" class="card-image" />
+      <p class="card-details">
         Robert Noyce and Gordon Moore rename the newly formed company 
         NM Electronics to Intel Corporation, laying the foundation for 
         decades of technological innovation.
@@ -43,11 +73,11 @@
     </div>
 
     <!-- Card 2: 1971 -->
-    <div>
+    <div class="card">
       <h2>1971</h2>
       <h3>First Microprocessor</h3>
-      <!-- Add image -->
-      <p>
+      <img src="img/2.jpg" alt="First Microprocessor 1971" class="card-image" />
+      <p class="card-details">
         Intel debuts the 4004, the world's first commercial microprocessor, 
         igniting the microprocessor revolution and propelling the future 
         of computing devices.
@@ -55,22 +85,22 @@
     </div>
 
     <!-- Card 3: 1978 -->
-    <div>
+    <div class="card">
       <h2>1978</h2>
       <h3>8086 Processor</h3>
-      <!-- Add image -->
-      <p>
+      <img src="img/3.jpg" alt="8086 Processor 1978" class="card-image" />
+      <p class="card-details">
         Launch of the 8086 processor, establishing the x86 architecture 
         that drives countless PCs and servers in the modern era.
       </p>
     </div>
 
     <!-- Card 4: 1985 -->
-    <div>
+    <div class="card">
       <h2>1985</h2>
       <h3>386 Processor</h3>
-      <!-- Add image -->
-      <p>
+      <img src="img/4.jpg" alt="386 Processor 1985" class="card-image" />
+      <p class="card-details">
         Intel introduces the 386 processor with 32-bit architecture, 
         ushering in a new era of performance and multitasking for 
         personal computers.
@@ -78,11 +108,11 @@
     </div>
 
     <!-- Card 5: 2006 -->
-    <div>
+    <div class="card">
       <h2>2006</h2>
       <h3>Peak GHG Emissions</h3>
-      <!-- Add image -->
-      <p>
+      <img src="img/1.jpg" alt="Peak GHG Emissions 2006" class="card-image" />
+      <p class="card-details">
         This year marks Intel's highest annual greenhouse gas emissions 
         for operations. Over subsequent years, Intel invests heavily in 
         chemical abatement, renewable energy, and energy-efficient 
@@ -91,11 +121,11 @@
     </div>
 
     <!-- Card 6: 2020 -->
-    <div>
+    <div class="card">
       <h2>2020</h2>
       <h3>RISE Strategy</h3>
-      <!-- Add image -->
-      <p>
+      <img src="img/2.jpg" alt="RISE Strategy 2020" class="card-image" />
+      <p class="card-details">
         Intel launches its RISE (Responsible, Inclusive, Sustainable, 
         Enabling) strategy and 2030 goals, aiming to drive industry-wide 
         progress on climate action, water stewardship, and waste reduction.
@@ -103,11 +133,11 @@
     </div>
 
     <!-- Card 7: 2022 -->
-    <div>
+    <div class="card">
       <h2>2022</h2>
       <h3>Net-Zero By 2040</h3>
-      <!-- Add image -->
-      <p>
+      <img src="img/3.jpg" alt="Net-Zero By 2040 2022" class="card-image" />
+      <p class="card-details">
         Intel announces its commitment to achieve net-zero greenhouse 
         gas emissions (Scope 1 and 2) across its global operations 
         by 2040, building on years of environmental initiatives.
@@ -115,11 +145,11 @@
     </div>
 
     <!-- Card 8: 2023 -->
-    <div>
+    <div class="card">
       <h2>2023</h2>
       <h3>Renewable Electricity</h3>
-      <!-- Add image -->
-      <p>
+      <img src="img/4.jpg" alt="Renewable Electricity 2023" class="card-image" />
+      <p class="card-details">
         The company achieves 99% renewable electricity usage worldwide, 
         helping to drastically lower carbon emissions and driving progress 
         toward Intel's long-term sustainability goals.
@@ -127,17 +157,123 @@
     </div>
 
     <!-- Card 9: 2024 -->
-    <div>
+    <div class="card">
       <h2>2024</h2>
       <h3>Sustainability Summit</h3>
-      <!-- Add image -->
-      <p>
+      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop" alt="Sustainability Summit 2024" class="card-image" />
+      <p class="card-details">
         Intel hosts its first Sustainability Summit, uniting suppliers, 
         government officials, and industry leaders to collaborate on 
         next-generation sustainable semiconductor manufacturing.
       </p>
     </div>
+    </div>
   </section>
-  <p>Scroll to view timeline | Hover over cards to learn more!</p>
+  
+  <!-- Footer -->
+  <footer>
+    <p>Scroll to view timeline | Hover over cards to learn more!</p>
+  </footer>
+
+  <!-- Simple script to toggle day/night mode -->
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const cardsContainer = document.querySelector('.cards-container');
+    const cards = Array.from(document.querySelectorAll('.card'));
+    const prevCard = document.getElementById('prevCard');
+    const nextCard = document.getElementById('nextCard');
+    let currentIndex = 0;
+
+    // Check if we're on a small screen (vertical layout)
+    function isSmallScreen() {
+      return window.innerWidth < 768;
+    }
+
+    function setActiveCard(index, shouldScroll) {
+      cards.forEach(function (card) {
+        card.classList.remove('active');
+      });
+
+      currentIndex = index;
+      const activeCard = cards[currentIndex];
+      activeCard.classList.add('active');
+
+      if (shouldScroll) {
+        // Use different scroll behavior for small vs large screens
+        if (isSmallScreen()) {
+          // Small screens: scroll vertically (block: center)
+          activeCard.scrollIntoView({ behavior: 'smooth', inline: 'nearest', block: 'center' });
+        } else {
+          // Large screens: scroll horizontally (inline: center)
+          activeCard.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
+      }
+    }
+
+    function updateActiveFromScroll() {
+      let closestIndex = 0;
+      let closestDistance = Infinity;
+
+      if (isSmallScreen()) {
+        // Small screens: track vertical scroll position
+        const containerCenter = cardsContainer.scrollTop + cardsContainer.offsetHeight / 2;
+        cards.forEach(function (card, index) {
+          const cardCenter = card.offsetTop + card.offsetHeight / 2;
+          const distance = Math.abs(containerCenter - cardCenter);
+
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestIndex = index;
+          }
+        });
+      } else {
+        // Large screens: track horizontal scroll position
+        const containerCenter = cardsContainer.scrollLeft + cardsContainer.offsetWidth / 2;
+        cards.forEach(function (card, index) {
+          const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+          const distance = Math.abs(containerCenter - cardCenter);
+
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestIndex = index;
+          }
+        });
+      }
+
+      if (closestIndex !== currentIndex) {
+        setActiveCard(closestIndex, false);
+      }
+    }
+
+    themeToggle.addEventListener('click', function () {
+      document.body.classList.toggle('night');
+
+      if (document.body.classList.contains('night')) {
+        themeToggle.setAttribute('aria-label', 'Switch to day mode');
+      } else {
+        themeToggle.setAttribute('aria-label', 'Switch to night mode');
+      }
+    });
+
+    prevCard.addEventListener('click', function () {
+      const nextIndex = (currentIndex - 1 + cards.length) % cards.length;
+      setActiveCard(nextIndex, true);
+    });
+
+    nextCard.addEventListener('click', function () {
+      const nextIndex = (currentIndex + 1) % cards.length;
+      setActiveCard(nextIndex, true);
+    });
+
+    cardsContainer.addEventListener('scroll', function () {
+      window.requestAnimationFrame(updateActiveFromScroll);
+    });
+
+    window.addEventListener('resize', function () {
+      updateActiveFromScroll();
+    });
+
+    setActiveCard(0, false);
+  </script>
 </body>
 </html>
